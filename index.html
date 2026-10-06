@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+ 
+<body>
+    <form id="frmCadastro" name="frmCadastrar" action="" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Identificação</legend>
+            <div>
+                <label for="txtNome">Nome: </label><input type="text" id="txtNome" name="txtNome" placeholder="Nome" maxlength="100">
+            </div>
+ 
+            <div>
+                <label> Email:<input type="email" id="txtEmail" name="txtEmail" placeholder="Email" maxlength="100"></label>
+            </div>
+        </fieldset>
+        <fieldset>
+                <legend>Data de Nascimento</legend>
+            <div>
+                <label for="dataNascimento1">Data de Nascimento (date): </label><input type="date" id="dataNascimento1" name="dataNascimento"
+                min="2026-09-22"max="2026-12-31">
+            </div>
+ 
+            <div>
+                <label for="dataNascimento">Data de Nascimento (datetime local):</label><input type="datetime-local" id="dataNascimento" name="dataNascimento"
+                min="2026-09-02T06:00" max="2026-10-28T08:00">
+            </div>
+        </fieldset>
+        <div>
+            Area de interesse:
+            <br>
+            <input type="checkbox" name="chkTecnologia" id="chkTecnologia" value="tecnologia">
+            <label for="chkTecnologia">Tecnologia</label>
+            <input type="checkbox" name="chkCulinaria" id="chkCulinaria" value="culinaria">
+            <label for="chkCulinaria">Culinaria</label>
+            <input type="checkbox" name="chkModa" id="chkModa" value="moda">
+            <label for="chkModa">Moda</label>
+        </div>
+        <div>
+            <label>Periodo</label>
+            <br>
+            <input type="radio" name="rdoPeriodo" id="rdoPeriodoMatutino" value="M">
+            <label for="rdoPeriodoMatutino">Periodo Matutino</label>
+            <input type="radio" name="rdoPeriodo" id="rdoPeriodoVespertino" value="V">
+            <label for="rdoPeriodoVespertino">Periodo Vespertino</label>
+            <input type="radio" name="rdoPeriodo" id="rdoPeriodoNoturno" value="N">
+            <label for="rdoPeriodoNoturno">Periodo Noturno</label>
+        </div>
+        <div>
+            <label>Estado:</label>
+            <select id="uf" name="uf">
+                <optgroup label="Região Centro-Oeste">
+                    <option value="MT">Mato Grosso</option>
+                </optgroup>
+                <optgroup label="Região Nordeste">
+                    <option value="PE">Pernambuco</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                </optgroup>
+                <optgroup label="Região Norte">
+                    <option value="AM">Amazonas</option>
+                    <option value="PA">Pará</option>
+                    <option value="TO">Tocantins</option>
+                </optgroup>
+                <optgroup label="Região Sudeste">
+                    <option value="MG">Minas Gerais</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+                <optgroup label="Região Sul">
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="SC">Santa Catarina</option>
+                </optgroup>
+                <option value="" selected>Selecione</option>  
+            </select>
+        </div>
+        <div>
+            <label for="arquivos" img src="" alt="Arquivos"></label>
+            <input type="file" id="arquivos" name="arquivos" accept="pdf, .docx" multiple>
+        </div>
+        <div>
+            <label for="msg">Mensagem: </label>
+            <textarea id="msg" name="msg" rows="10" cols="100" maxlength="300" ></textarea>
+        <div>
+            <input type="submit">
+        </div>
+    </form>
+</body>
+
+<!--- <fieldset> serve para separar grupos de elementos no formulário -->
+<!--LABEL = serve pra ajudar pessoas com deficiencias, mas nao so isso,
+ como da o suporte pro mouse, clicando onde nos queremos -->
+<!--PLACEHOLDER = serve pra dentro do campo, ja deixar algo escrito,
+ pro usuario saber oq deve por-->
+<!--MAXLENGTH = limita o tamanho maximo de caracteres-->
+ 
+</html>
